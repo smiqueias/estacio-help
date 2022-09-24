@@ -1,8 +1,6 @@
-import React from 'react';
-import Index from './src/register/index'
+import React from "react";
+import Index from "./src/register/Index";
 
 export default function App() {
-  return (
-    <Index/>
-  );
+  return <Index />;
 }

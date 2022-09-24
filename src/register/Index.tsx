@@ -44,7 +44,7 @@ export default function App() {
             <AspectRatio w="100%" ratio={16 / 9}>
               <Image
                 source={{
-                  uri: "https://picsum.photos/400/700/?redscale"
+                  uri: "https://picsum.photos/400/700/?redscale",
                 }}
                 alt="image"
               />
