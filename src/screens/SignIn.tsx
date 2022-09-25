@@ -3,6 +3,7 @@ import React from "react";
 import { VStack } from "native-base";
 import { Button } from "../components/Button";
 import { useNavigation } from "@react-navigation/native";
+import { Header } from "../components/Header";
 export function SignIn() {
   const navigation = useNavigation();
   function navigateToHomeScreen() {
@@ -17,6 +18,7 @@ export function SignIn() {
   }
   return (
     <VStack flex={1} pb={6} bg="gray.700">
+      <Header title="Solicitação" />
       <VStack space={4} alignItems="center" mt={48}>
         <Button
           width={300}
