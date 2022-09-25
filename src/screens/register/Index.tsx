@@ -11,6 +11,7 @@ import {
   Image,
 } from "native-base";
 import React from "react";
+import { Routes } from "../../routes";
 import { THEME } from "../../styles/theme";
 import { SignIn } from "../SignIn";
 
@@ -22,7 +23,7 @@ export default function App() {
         backgroundColor={"transparent"}
         translucent
       />
-      <SignIn />
+      <Routes />
     </NativeBaseProvider>
   );
 }

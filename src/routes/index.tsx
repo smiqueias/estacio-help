@@ -7,7 +7,7 @@ import { AppRoutes } from "./app.routes";
 import React from "react";
 
 export function Routes() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   if (loading) {
     return <Loading />;
