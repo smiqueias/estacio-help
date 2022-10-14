@@ -59,12 +59,16 @@ export function Home() {
             isActive={false}
           />
         </HStack>
-        <HStack mb={80} ml={24}>
+        <HStack flex={1}>
           <Text color={"gray.300"} fontSize="lg">
             Você ainda não tem chamados criados
           </Text>
         </HStack>
-        <Button title="Nova solicitação" onPress={navigateToRegisterScreen} />
+        <Button
+          mb={8}
+          title="Nova solicitação"
+          onPress={navigateToRegisterScreen}
+        />
       </VStack>
     </VStack>
   );
