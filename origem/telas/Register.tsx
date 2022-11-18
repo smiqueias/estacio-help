@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button } from "../components/Button";
 import { Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
+import axios from "axios";
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 
@@ -17,14 +17,21 @@ export function Register() {
       return Alert.alert("Cadastrar", "Informe o patrimônio e a descrição.");
     }
     return (
-      console.log(patrimony),
+      axios({
+        method: 'post',
+        url: 'https://appestacioapi.herokuapp.com/api/called/save',
+        data: {
+            "calledCreatedDescription": description,
+            "calledSoluction":patrimony,
+            "userEntity": 1
+        }
+      }),
       Alert.alert("Solicitação", "Solicitação registrada com sucesso"),
       navigation.goBack()
     );
   }
   return (
     <VStack flex={1} p={6} bg="gray.600">
-    
       <Header title="Solicitação" />
       <Input
         placeholder="Numéro do Património"
